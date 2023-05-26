@@ -70,7 +70,7 @@ namespace SAIN_Grenades.Patches
         {
             try
             {
-                Singleton<GClass629>.Instance.PlaySound(null, __instance.transform.position, 20f, AISoundType.gun);
+                Singleton<GClass627>.Instance.PlaySound(null, __instance.transform.position, 20f, AISoundType.gun);
                 DebugDrawer.Sphere(__instance.transform.position, 1.0f, Color.black, 5f);
                 Logger.LogInfo($"Played AISound for grenade bounce");
             }

@@ -16,12 +16,12 @@ namespace SAIN_Audio.Combat.Patches
             return AccessTools.Method(typeof(GClass513), "CanThrowGrenade2");
         }
         [PatchPrefix]
-        public static bool PatchPrefix(ref GClass513 __result, Vector3 from, Vector3 trg, float maxPower, AIGreandeAng greandeAng, float minThrowDistSqrt = -1f, float maxPercent = 0.5f)
+        public static bool PatchPrefix(ref GClass511 __result, Vector3 from, Vector3 trg, float maxPower, AIGreandeAng greandeAng, float minThrowDistSqrt = -1f, float maxPercent = 0.5f)
         {
             // Check if target is too close
             if (minThrowDistSqrt > 0f && (from - trg).sqrMagnitude < 5f)
             {
-                __result = new GClass513();
+                __result = new GClass511();
                 return false;
             }
 
@@ -48,13 +48,13 @@ namespace SAIN_Audio.Combat.Patches
             float launchSpeedSquared = launchSpeedNumerator / launchSpeedDenominator;
             if (launchSpeedSquared < 0f)
             {
-                __result = new GClass513();
+                __result = new GClass511();
                 return false;
             }
             float launchSpeed = Mathf.Sqrt(launchSpeedSquared);
             if (launchSpeed > maxPower)
             {
-                __result = new GClass513();
+                __result = new GClass511();
                 return false;
             }
 
@@ -65,7 +65,7 @@ namespace SAIN_Audio.Combat.Patches
             Vector3 horizontalVelocity = horizontalTrajectory * distanceFactor;
             if ((from - trg).magnitude / horizontalVelocity.magnitude < 10f)
             {
-                __result = new GClass513();
+                __result = new GClass511();
                 return false;
             }
 
@@ -109,12 +109,12 @@ namespace SAIN_Audio.Combat.Patches
                 // Return obstacle hit
                 if (hasObstacle)
                 {
-                    __result = new GClass513(hit.collider.gameObject);
+                    __result = new GClass511(hit.collider.gameObject);
                 }
             }
 
             // Return successful throw data
-            __result = new GClass513(ang, launchSpeed, distanceVector, from, trg, false, null);
+            __result = new GClass511(ang, launchSpeed, distanceVector, from, trg, false, null);
             return false;
         }
     }

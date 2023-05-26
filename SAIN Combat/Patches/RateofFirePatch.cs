@@ -50,7 +50,7 @@ namespace SAIN_Audio.Combat.Patches
     {
         protected override MethodBase GetTargetMethod()
         {
-            return AccessTools.Method(typeof(GClass363), "method_1");
+            return AccessTools.Method(typeof(GClass362), "method_1");
         }
 
         [PatchPrefix]

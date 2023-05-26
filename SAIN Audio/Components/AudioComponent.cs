@@ -23,19 +23,19 @@ namespace SAIN_Audio.Components
         }
 
         /// <summary>
-        /// Subscribes to the OnSoundPlayed event of the GClass629 singleton instance. 
+        /// Subscribes to the OnSoundPlayed event of the GClass627 singleton instance. 
         /// </summary>
         private void OnEnable()
         {
-            Singleton<GClass629>.Instance.OnSoundPlayed += HearSound;
+            Singleton<GClass627>.Instance.OnSoundPlayed += HearSound;
         }
 
         /// <summary>
-        /// Unsubscribes from the OnSoundPlayed event of the GClass629 singleton instance.
+        /// Unsubscribes from the OnSoundPlayed event of the GClass627 singleton instance.
         /// </summary>
         private void OnDisable()
         {
-            Singleton<GClass629>.Instance.OnSoundPlayed -= HearSound;
+            Singleton<GClass627>.Instance.OnSoundPlayed -= HearSound;
         }
 
         /// <summary>
@@ -706,8 +706,6 @@ namespace SAIN_Audio.Components
         private float HeardNoiseTime = 0f;
 
         public delegate void GDelegate4(Vector3 vector, float bulletDistance, AISoundType type);
-
-        public event GDelegate4 OnEnemySounHearded;
 
         /// <summary>
         /// Not Used. Checks if the given player is part of the given BotGroupClass.

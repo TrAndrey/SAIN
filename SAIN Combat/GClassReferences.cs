@@ -15,7 +15,7 @@ namespace Solarint.VersionCheck
         public static readonly Dictionary<int, string> ShootDataClassNames = new Dictionary<int, string>
         {
             { 22617, "GClass546" }, // spt 3.5.5
-            { 22173, "GClass544" }, // spt 3.5.1 - 3.5.4
+            { 22173, "GClass542" }, // spt 3.5.1 - 3.5.4
         };
 
         public static readonly Lazy<Type> recoilClass = new Lazy<Type>(() => GetDataType(RecoilDataClassNames, CheckBuildVersion()));

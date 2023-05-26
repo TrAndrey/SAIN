@@ -67,7 +67,7 @@ namespace bsgcrap
 
             botOwner_0.Medecine.FirstAid.OnNoDamagedParts += Dispose;
 
-            gclass557_0 = new GClass557(1f, handDamageAccuracySpeed, 1f, 1f, 1f, handDamageScatteringMinMax, 1f, 1f, 1f);
+            GClass555_0 = new GClass555(1f, handDamageAccuracySpeed, 1f, 1f, 1f, handDamageScatteringMinMax, 1f, 1f, 1f);
 
             scatter = botOwner_0.Settings.Current.CurrentMaxScatter;
         }
@@ -128,9 +128,9 @@ namespace bsgcrap
         {
             CurScatering += dmgInfo.Damage * botOwner_0.Settings.FileSettings.Scattering.FromShot;
 
-            if (!gclass557_0.IsApplyed && (botOwner_0.Medecine.FirstAid.IsPartDamaged(EBodyPart.LeftArm) || botOwner_0.Medecine.FirstAid.IsPartDamaged(EBodyPart.RightArm)))
+            if (!GClass555_0.IsApplyed && (botOwner_0.Medecine.FirstAid.IsPartDamaged(EBodyPart.LeftArm) || botOwner_0.Medecine.FirstAid.IsPartDamaged(EBodyPart.RightArm)))
             {
-                botOwner_0.Settings.Current.Apply(gclass557_0, -1f);
+                botOwner_0.Settings.Current.Apply(GClass555_0, -1f);
             }
 
             if (!InjuredMove)
@@ -203,9 +203,9 @@ namespace bsgcrap
         }
         private void DoneHealing()
         {
-            if (gclass557_0.IsApplyed)
+            if (GClass555_0.IsApplyed)
             {
-                botOwner_0.Settings.Current.Dismiss(gclass557_0);
+                botOwner_0.Settings.Current.Dismiss(GClass555_0);
             }
 
             if (InjuredMove)
@@ -241,7 +241,7 @@ namespace bsgcrap
         private bool ToSlowBotSpeed;
         private bool MoveShooting;
         private bool InjuredMove;
-        private GClass557 gclass557_0;
+        private GClass555 GClass555_0;
     }
     public class AimingComponent
     {
@@ -321,7 +321,7 @@ namespace bsgcrap
 
             ScatteringData.Activate();
 
-            gclass557_0 = new GClass557(1f, 1f, 1f, 1f, 1f, 1f, 1f, botOwner_0.Settings.FileSettings.Scattering.ToCaution, 1f);
+            GClass555_0 = new GClass555(1f, 1f, 1f, 1f, 1f, 1f, 1f, botOwner_0.Settings.FileSettings.Scattering.ToCaution, 1f);
         }
         public void NodeUpdate()
         {
@@ -448,11 +448,11 @@ namespace bsgcrap
 
             if (bulletCount / (float)maxBulletCount < botOwner_0.Settings.FileSettings.Scattering.Caution)
             {
-                botOwner_0.Settings.Current.Apply(gclass557_0, -1f);
+                botOwner_0.Settings.Current.Apply(GClass555_0, -1f);
                 return;
             }
 
-            botOwner_0.Settings.Current.Dismiss(gclass557_0);
+            botOwner_0.Settings.Current.Dismiss(GClass555_0);
         }
         private float method_4(float dist)
         {
@@ -554,7 +554,7 @@ namespace bsgcrap
         private bool bool_1;
         private bool bool_2;
         private Vector3 vector3_0;
-        private GClass557 gclass557_0;
+        private GClass555 GClass555_0;
         private GInterface110 ginterface110_0;
         private AimStatus aimStatus_0 = AimStatus.NoTarget;
         private float float_1;

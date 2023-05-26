@@ -18,13 +18,13 @@ namespace SAIN.Combat.Patches
 
         protected override MethodBase GetTargetMethod()
         {
-            _Boolean_0 = AccessTools.Property(typeof(GClass544), "Boolean_0");
-            _LastAimTime = AccessTools.PropertySetter(typeof(GClass544), "LastAimTime");
-            return AccessTools.Method(typeof(GClass544), "method_7");
+            _Boolean_0 = AccessTools.Property(typeof(GClass542), "Boolean_0");
+            _LastAimTime = AccessTools.PropertySetter(typeof(GClass542), "LastAimTime");
+            return AccessTools.Method(typeof(GClass542), "method_7");
         }
         [PatchPrefix]
         public static bool PatchPrefix(
-            GClass544 __instance, ref BotDifficultySettingsClass ___gclass561_0, ref BotOwner ___botOwner_0, // Class References
+            GClass542 __instance, ref BotDifficultySettingsClass ___gclass561_0, ref BotOwner ___botOwner_0, // Class References
             ref bool ___bool_1, ref float ___float_10, // Field References
             float dist, float ang, ref float __result) // Original Input Parameters
         {
@@ -83,11 +83,11 @@ namespace SAIN.Combat.Patches
         protected override MethodBase GetTargetMethod()
         {
             // This is not a field, but a property, and it is private, so we must use reflection to read its value later
-            _Boolean_0 = AccessTools.Property(typeof(GClass544), "Boolean_0");
+            _Boolean_0 = AccessTools.Property(typeof(GClass542), "Boolean_0");
 
             // These properties are "read only" so we must use reflection
-            _LastSpreadCount = AccessTools.PropertySetter(typeof(GClass544), "LastSpreadCount");
-            return AccessTools.Method(typeof(GClass544), "method_9");
+            _LastSpreadCount = AccessTools.PropertySetter(typeof(GClass542), "LastSpreadCount");
+            return AccessTools.Method(typeof(GClass542), "method_9");
         }
 
         // Save the method/property info
@@ -96,7 +96,7 @@ namespace SAIN.Combat.Patches
 
         [PatchPrefix]
         public static bool PatchPrefix(float dist, float angCoef, float additionCoef,
-            GClass544 __instance, ref BotOwner ___botOwner_0,
+            GClass542 __instance, ref BotOwner ___botOwner_0,
             ref bool ___bool_1, ref bool ___bool_3,
             ref Vector3 ___vector3_5, ref Vector3 __result)
         {

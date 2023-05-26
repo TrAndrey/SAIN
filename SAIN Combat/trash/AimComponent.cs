@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace SAIN.Combat.Components
 {
-    public class GClass544 : GInterface5
+    public class GClass542 : GInterface5
     {
         public event Action<Vector3> OnSettingsTarget
         {
@@ -77,7 +77,7 @@ namespace SAIN.Combat.Components
         public bool AlwaysTurnOnLight { get; private set; }
         public Vector3 RealTargetPoint { get; private set; }
         public float LastDist2Target { get; private set; }
-        public GClass544(BotOwner owner)
+        public GClass542(BotOwner owner)
         {
             AlwaysTurnOnLight = false;
             gclass543_0 = new GClass543(owner);

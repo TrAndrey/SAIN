@@ -17,11 +17,11 @@ namespace SAIN_Audio.Combat.Patches
         protected override MethodBase GetTargetMethod()
         {
             // Note: Can't find this based on the property type of AimingData? Is this because of it being an interface?
-            return AccessTools.Method(typeof(GClass544), "method_13");
+            return AccessTools.Method(typeof(GClass542), "method_13");
         }
 
         [PatchPrefix]
-        public static bool PatchPrefix(GClass544 __instance, ref BotOwner ___botOwner_0, ref Vector3 ___vector3_5, ref Vector3 ___vector3_4, ref float ___float_13)
+        public static bool PatchPrefix(GClass542 __instance, ref BotOwner ___botOwner_0, ref Vector3 ___vector3_5, ref Vector3 ___vector3_4, ref float ___float_13)
         {
             __instance.EndTargetPoint = __instance.RealTargetPoint
                 + ___vector3_5

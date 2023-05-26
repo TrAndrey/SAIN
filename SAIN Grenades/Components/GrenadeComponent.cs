@@ -430,7 +430,7 @@ namespace SAIN_Grenades.Components
 
                 Vector2 vector = new Vector2(v.magnitude, force.y);
 
-                float num = 2f * vector.x * vector.y / GClass560.Core.G;
+                float num = 2f * vector.x * vector.y / GClass558.Core.G;
 
                 if (vector.y < 0f)
                 {

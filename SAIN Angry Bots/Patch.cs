@@ -88,7 +88,7 @@ namespace SAIN_Grenades.Patches
         }
 
         [PatchPrefix]
-        public static bool PatchPrefix(GClass475 __instance, bool value) //////////////////////////////////////////////////////////////////////////////////// GCLASS GO HERE
+        public static bool PatchPrefix(GClass473 __instance, bool value) //////////////////////////////////////////////////////////////////////////////////// GCLASS GO HERE
         {
             // save "value" as a bool that is easier to understand for readability
             bool isNowVisible = value;
@@ -144,7 +144,7 @@ namespace SAIN_Grenades.Patches
                 }
 
                 int num = 0;
-                foreach (KeyValuePair<IAIDetails, GClass475> keyValuePair in __instance.Owner.EnemiesController.EnemyInfos)
+                foreach (KeyValuePair<IAIDetails, GClass473> keyValuePair in __instance.Owner.EnemiesController.EnemyInfos)
                 {
                     if (keyValuePair.Value.IsVisible)
                     {

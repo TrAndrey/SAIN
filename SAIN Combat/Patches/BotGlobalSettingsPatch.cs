@@ -100,10 +100,10 @@ namespace SAIN_Audio.Combat.Patches
     {
         protected override MethodBase GetTargetMethod()
         {
-            return AccessTools.Method(typeof(GClass559), "Update");
+            return AccessTools.Method(typeof(GClass557), "Update");
         }
         [PatchPostfix]
-        public static void PatchPostfix(GClass559 __instance)
+        public static void PatchPostfix(GClass557 __instance)
         {
             __instance.SHOOT_TO_CHANGE_RND_PART_DELTA = 0.01f;
             __instance.CAN_SHOOT_TO_HEAD = false;

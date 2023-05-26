@@ -11,7 +11,7 @@ namespace SAIN_Audio.Movement.Patches
     {
         protected override MethodBase GetTargetMethod()
         {
-            return AccessTools.Method(typeof(GClass407), "TryMoveToEnemy");
+            return AccessTools.Method(typeof(GClass405), "TryMoveToEnemy");
         }
         [PatchPrefix]
         public static bool PatchPrefix(ref BotOwner ___botOwner_0)
